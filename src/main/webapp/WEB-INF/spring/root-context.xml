@@ -1,0 +1,10 @@
+<beans:beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:beans="http://www.springframework.org/schema/beans"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+<!-- Database Configuration -->
+	<beans:import resource="configDb/dataSource.xml"/>
+	<beans:import resource="configDb/hibernate.xml"/>
+</beans:beans>

@@ -1,0 +1,9 @@
+/* * ------------------------------------------------------------------------
+ * JA Wall Template for Joomla25
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------*//* MASONRY PRESETS--------------------------------------------------------- *//* Default (Medium) ----*/.item {  width: 16.6%; /* 6 cols */}.grid-double {  width: 33.2%;}.grid-triple {  width: 49.8%;}/* Small ---*/body.basegrid-s .item {  width: 14.2%; /* 7 cols */}body.basegrid-s .grid-double {  width: 28.4%;}body.basegrid-s .grid-triple {  width: 42.6%;}/* Large ---*/body.basegrid-l .item {  width: 20%; /* 5 cols */}body.basegrid-l .grid-double {  width: 40%;}body.basegrid-l .grid-triple {  width: 60%;}/* X-Large ---*/body.basegrid-xl .item {  width: 25%; /* 4 cols  */}body.basegrid-xl .grid-double {  width: 50%;}body.basegrid-xl .grid-triple {  width: 75%;}/* MAIN CONTAINER--------------------------------------------------------- *//* Content ---*/body.has-aside #content {  width: 50%;}/* Aside ---*/#aside {  width: 50%;}

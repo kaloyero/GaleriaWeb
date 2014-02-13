@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+<!-- Hibernate session factory -->
+<bean id="sessionFactory" 
+class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+ 
+    <property name="dataSource">
+      <ref bean="dataSource"/>
+    </property>
+ 
+    <property name="hibernateProperties">
+       <props>
+         <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+         <prop key="hibernate.show_sql">true</prop>
+       </props>
+    </property>
+ 
+    <property name="annotatedClasses">
+	<list>
+		<value>com.country.hibernate.model.Acceso</value>
+		<value>com.country.hibernate.model.AccesoGrupo</value>
+		<value>com.country.hibernate.model.Actividad</value>
+		<value>com.country.hibernate.model.Asignacion</value>
+		<value>com.country.hibernate.model.Autorizado</value>
+		<value>com.country.hibernate.model.Aviso</value>
+		<value>com.country.hibernate.model.AvisoCategoria</value>
+		<value>com.country.hibernate.model.AvisoSuscripcion</value>
+		<value>com.country.hibernate.model.Ciudad</value>
+		<value>com.country.hibernate.model.Concepto</value>
+		<value>com.country.hibernate.model.Cronograma</value>
+		<value>com.country.hibernate.model.DataTable</value>
+		<value>com.country.hibernate.model.Direccion</value>
+		<value>com.country.hibernate.model.Empleado</value>
+		<value>com.country.hibernate.model.EmpleadoCategoria</value>
+		<value>com.country.hibernate.model.Emprendimiento</value>
+		<value>com.country.hibernate.model.Especie</value>
+		<value>com.country.hibernate.model.Evento</value>
+		<value>com.country.hibernate.model.EventoIntegrante</value>
+		<value>com.country.hibernate.model.Infraccion</value>
+		<value>com.country.hibernate.model.Instructor</value>
+		<value>com.country.hibernate.model.Integrante</value>
+		<value>com.country.hibernate.model.IntegranteActividades</value>
+		<value>com.country.hibernate.model.Liquidacion</value>
+		<value>com.country.hibernate.model.LiquidacionCargo</value>
+		<value>com.country.hibernate.model.Localidad</value>
+		<value>com.country.hibernate.model.Mascota</value>
+		<value>com.country.hibernate.model.Mensaje</value>
+		<value>com.country.hibernate.model.MensajeCategorias</value>
+		<value>com.country.hibernate.model.MensajeDetalles</value>
+		<value>com.country.hibernate.model.Noticia</value>
+		<value>com.country.hibernate.model.NoticiaAdjunto</value>
+		<value>com.country.hibernate.model.NoticiaCategorias</value>
+		<value>com.country.hibernate.model.NoticiaSuscripciones</value>
+		<value>com.country.hibernate.model.NoticiaValoraciones</value>
+		<value>com.country.hibernate.model.Pago</value>
+		<value>com.country.hibernate.model.Periodo</value>
+		<value>com.country.hibernate.model.Persona</value>
+		<value>com.country.hibernate.model.Provincia</value>
+		<value>com.country.hibernate.model.Raza</value>
+		<value>com.country.hibernate.model.Recurso</value>
+		<value>com.country.hibernate.model.RecursoDisponibilidad</value>
+		<value>com.country.hibernate.model.RecursoExcepcion</value>
+		<value>com.country.hibernate.model.Reserva</value>
+		<value>com.country.hibernate.model.Tarifa</value>
+		<value>com.country.hibernate.model.Telefono</value>
+		<value>com.country.hibernate.model.TipoAutorizacion</value>
+		<value>com.country.hibernate.model.TipoDocumento</value>
+		<value>com.country.hibernate.model.TipoInfraccion</value>
+		<value>com.country.hibernate.model.TipoPagos</value>
+		<value>com.country.hibernate.model.TipoRecurso</value>
+		<value>com.country.hibernate.model.TipoTelefono</value>
+		<value>com.country.hibernate.model.TipoVacuna</value>
+		<value>com.country.hibernate.model.TipoVehiculo</value>
+		<value>com.country.hibernate.model.Unidad</value>
+		<value>com.country.hibernate.model.UnidadConcepto</value>
+		<value>com.country.hibernate.model.User</value>
+		<value>com.country.hibernate.model.Usuario</value>
+		<value>com.country.hibernate.model.UsuarioAccesos</value>		
+		<value>com.country.hibernate.model.Vacuna</value>
+		<value>com.country.hibernate.model.Vehiculo</value>		
+	</list>
+    </property>
+</bean>
+
+<!-- Enable annotation style of managing transactions -->
+	<tx:annotation-driven transaction-manager="transactionManager" />  
+
+<!-- Transaction manager for a single Hibernate SessionFactory-->
+<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+  <property name="sessionFactory" ref="sessionFactory" />
+</bean>
+
+</beans>

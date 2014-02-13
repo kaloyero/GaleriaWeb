@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------------------
+ * JA Wall Template for Joomla25
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+*/
+
+/* MAIN CONTAINER
+--------------------------------------------------------- */
+/* Content ---*/
+body.has-aside #content {
+  width: 70%;
+}
+
+/* Aside ---*/
+#aside {
+  width: 30%;
+}
+
+#aside .col {
+  width: 100%; /* Only 1 column on aside */
+}
